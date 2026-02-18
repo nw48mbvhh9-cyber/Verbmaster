@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@layer base {
+    html {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        /* For dark mode consistency on iOS status bar */
+        /* Ensure background color covers notch area */
+        background-color: #f8fafc;
+    }
+}
+
+.pt-safe {
+    padding-top: env(safe-area-inset-top);
+}
+
+.pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Improve button touch feel */
+button {
+    touch-action: manipulation;
+}
